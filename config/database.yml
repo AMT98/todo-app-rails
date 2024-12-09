@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: todo_app_rails_development
+  username: postgres
+  password:
+  host: localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -82,5 +85,5 @@ test:
 production:
   <<: *default
   database: todo_app_rails_production
-  username: todo_app_rails
+  username: postgres
   password: <%= ENV['TODO_APP_RAILS_DATABASE_PASSWORD'] %>
