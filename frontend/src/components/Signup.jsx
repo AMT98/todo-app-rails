@@ -8,12 +8,17 @@ const Signup = ({ onSignupSuccess }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const response = await signup({ name, email, password });
+      console.log("Signup success:", response.data);
       onSignupSuccess(response.data);
     } catch (error) {
-      console.error("Signup failed", error);
-      alert("Could not create user");
+      console.error("Signup failed:", error.response?.data || error);
+      alert(
+        "Could not create user: " + error?.response?.data?.error ||
+          "Unknown error"
+      );
     }
   };
 

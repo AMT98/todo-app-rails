@@ -38,7 +38,7 @@ const Login = ({ onLoginSuccess }) => {
         <div className="py-6 px-8 h-80 mt-20 bg-white rounded shadow-xl">
           <form onSubmit={handleSubmit}>
             <div>
-              <label for="email" className="block text-gray-800 font-bold">
+              <label htmlFor="email" className="block text-gray-800 font-bold">
                 Email:
               </label>
               <input
@@ -53,7 +53,7 @@ const Login = ({ onLoginSuccess }) => {
               />
             </div>
             <div className="mb-6">
-              <label for="name" className="block text-gray-800 font-bold">
+              <label htmlFor="name" className="block text-gray-800 font-bold">
                 Password:
               </label>
               <input

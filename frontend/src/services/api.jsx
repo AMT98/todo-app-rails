@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:3000" });
+const API = axios.create();
 
 export const login = (email, password) =>
   API.post("/login", { email, password });
